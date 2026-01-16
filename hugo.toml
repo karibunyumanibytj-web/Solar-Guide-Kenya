@@ -6,6 +6,10 @@ theme = "PaperMod"
 [params]
     env = "production"
     defaultTheme = "auto"
+    # ADD THESE THREE LINES:
+    ShowToc = true
+    TocOpen = false
+    ShowReadingTime = true
 
 [params.homeInfoParams]
    [params.homeInfoParams]
