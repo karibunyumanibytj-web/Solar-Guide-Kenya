@@ -3,8 +3,12 @@ languageCode = "en-us"
 title = "Solar Guide Kenya"
 theme = "PaperMod"
 
+# This line blocks the invisible files that are causing the "art-x-" crash
+ignoreFiles = ["\\.DS_Store", "._.*", "\\.gitkeep"]
+
 [params]
     env = "production"
+    defaultTheme = "auto"
 
 [params.homeInfoParams]
     Title = "Welcome to Solar Guide Kenya ☀️"
@@ -16,21 +20,6 @@ theme = "PaperMod"
     weight = 10
 
 [[menu.main]]
-    name = "Solar Reviews"
+    name = "Reviews"
     url = "posts/"
     weight = 20
-
-[[menu.main]]
-    name = "About Us"
-    url = "about/"
-    weight = 30
-
-[[menu.main]]
-    name = "Contact Us"
-    url = "contact/"
-    weight = 40
-
-[[menu.main]]
-    name = "Privacy Policy"
-    url = "privacy/"
-    weight = 50
