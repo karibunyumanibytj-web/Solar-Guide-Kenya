@@ -1,44 +1,48 @@
-baseURL: "https://karibunyumanibytj-web.github.io/Solar-Guide-Kenya/"
-languageCode: "en-us"
-title: "Solar Guide Kenya"
-theme: "PaperMod"
+name: Deploy Hugo site to Pages
 
-# These lines fix the "Plain Text" look
-canonifyURLs: true
-relativeURLs: true
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-params:
-  env: "production"
-  title: "Solar Guide Kenya"
-  description: "The best guide for solar panels, inverters, and batteries in Kenya."
-  author: "Solar Guide Team"
-  defaultTheme: "auto"
-  ShowReadingTime: true
-  ShowShareButtons: true
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-  homeInfoParams:
-    Title: "Welcome to Solar Guide Kenya ☀️"
-    Content: "Helping you find the best solar solutions to save on KPLC bills. We review the latest inverters, panels, and batteries available in the Kenyan market."
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-menu:
-  main:
-    - identifier: home
-      name: "Home"
-      url: "/"
-      weight: 10
-    - identifier: posts
-      name: "Solar Reviews"
-      url: "/posts/"
-      weight: 20
-    - identifier: about
-      name: "About Us"
-      url: "/about/"
-      weight: 30
-    - identifier: contact
-      name: "Contact Us"
-      url: "/contact/"
-      weight: 40
-    - identifier: privacy
-      name: "Privacy"
-      url: "/privacy/"
-      weight: 50
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+      - name: Build with Hugo
+        run: hugo --minify
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
