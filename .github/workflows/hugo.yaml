@@ -25,15 +25,12 @@ jobs:
 
       - name: Wipe and Reinstall Theme
         run: |
-          # 1. This deletes the 'themes' folder you uploaded
           rm -rf themes
-          # 2. This creates a fresh, empty themes folder
           mkdir -p themes
-          # 3. This downloads a perfect, clean copy of PaperMod
           git clone --depth=1 https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
-          # 4. This removes the folder that causes the "art-x-" crash
           rm -rf themes/PaperMod/i18n
 
+      # This creates the actual website files
       - name: Build with Hugo
         run: hugo --minify
 
@@ -45,6 +42,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    # --- THIS IS THE FIX FOR THE 400 ERROR ---
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # -----------------------------------------
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
