@@ -3,46 +3,40 @@ languageCode = "en-us"
 title = "Solar Guide Kenya"
 theme = "PaperMod"
 
-# Fixes the "Plain Text" and broken image issues
-canonifyURLs = true
-relativeURLs = true
-
 [params]
     env = "production"
     title = "Solar Guide Kenya"
-    description = "Save on KPLC bills with the best solar panels in Kenya."
+    description = "The best guide for solar panels, inverters, and batteries in Kenya."
     author = "Solar Guide Team"
     defaultTheme = "auto"
     ShowReadingTime = true
     ShowShareButtons = true
 
-    [params.homeInfoParams]
-        Title = "Welcome to Solar Guide Kenya ☀️"
-        Content = "Helping you find the best solar solutions to save on KPLC bills."
+[params.homeInfoParams]
+    Title = "Welcome to Solar Guide Kenya ☀️"
+    Content = "Helping you find the best solar solutions to save on KPLC bills. We review the latest inverters, panels, and batteries available in the Kenyan market."
 
-[menu]
-    [[menu.main]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
-        weight = 10
-    [[menu.main]]
-        identifier = "posts"
-        name = "Solar Reviews"
-        url = "/posts/"
-        weight = 20
-    [[menu.main]]
-        identifier = "about"
-        name = "About Us"
-        url = "/about/"
-        weight = 30
-    [[menu.main]]
-        identifier = "contact"
-        name = "Contact Us"
-        url = "/contact/"
-        weight = 40
-    [[menu.main]]
-        identifier = "privacy"
-        name = "Privacy"
-        url = "/privacy/"
-        weight = 50
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+
+[[menu.main]]
+    name = "Solar Reviews"
+    url = "posts/"
+    weight = 20
+
+[[menu.main]]
+    name = "About Us"
+    url = "about/"
+    weight = 30
+
+[[menu.main]]
+    name = "Contact Us"
+    url = "contact/"
+    weight = 40
+
+[[menu.main]]
+    name = "Privacy Policy"
+    url = "privacy/"
+    weight = 50
