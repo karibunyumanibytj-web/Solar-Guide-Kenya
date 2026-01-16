@@ -10,8 +10,7 @@ theme = "PaperMod"
     ShowToc = true
     TocOpen = false
     ShowReadingTime = true
-
-[params.homeInfoParams]
+    
    [params.homeInfoParams]
     Title = "Solar Guide Kenya ☀️"
     Content = "Cutting through the noise to find you the best solar deals in Nairobi."
