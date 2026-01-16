@@ -2,20 +2,13 @@ baseURL = "https://karibunyumanibytj-web.github.io/Solar-Guide-Kenya/"
 languageCode = "en-us"
 title = "Solar Guide Kenya"
 theme = "PaperMod"
-canonifyURLs = true
-relativeURLs = true
+
 [params]
     env = "production"
-    title = "Solar Guide Kenya"
-    description = "The best guide for solar panels, inverters, and batteries in Kenya."
-    author = "Solar Guide Team"
-    defaultTheme = "auto"
-    ShowReadingTime = true
-    ShowShareButtons = true
 
 [params.homeInfoParams]
     Title = "Welcome to Solar Guide Kenya ☀️"
-    Content = "Helping you find the best solar solutions to save on KPLC bills. We review the latest inverters, panels, and batteries available in the Kenyan market."
+    Content = "The best guide for solar in Kenya."
 
 [[menu.main]]
     name = "Home"
