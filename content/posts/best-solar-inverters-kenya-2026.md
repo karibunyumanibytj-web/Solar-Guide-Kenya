@@ -2,7 +2,7 @@
 title: "Top 5 Best Hybrid Solar Inverters in Kenya (2026 Prices & Buying Guide)"
 date: 2026-01-16
 description: "A complete guide to the best solar inverters in Kenya. Compare prices, performance, and reliability of Must, Growatt, and Deye for 2026."
-image: "/images/best-inverters-kenya.jpg"
+image: "/images/best-solar-inverters-kenya-banner.jpg"
 categories: ["Buying Guides", "Solar Inverters"]
 tags: ["Must Inverter", "Growatt Kenya", "Deye Inverter", "Solar Prices Kenya"]
 author: "Solar Guide Team"
