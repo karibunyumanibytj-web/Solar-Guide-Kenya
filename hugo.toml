@@ -1,49 +1,48 @@
-# Your exact GitHub URL
-baseURL: 'https://karibunyumanibytj-web.github.io/Solar-Guide-Kenya/'
-languageCode: 'en-us'
-title: 'Solar Guide Kenya'
-theme: 'PaperMod'
+baseURL = "https://karibunyumanibytj-web.github.io/Solar-Guide-Kenya/"
+languageCode = "en-us"
+title = "Solar Guide Kenya"
+theme = "PaperMod"
 
-# Fixes the layout/broken images
-canonifyURLs: true
-relativeURLs: true
+# Fixes the "Plain Text" and broken image issues
+canonifyURLs = true
+relativeURLs = true
 
 [params]
-    env = 'production'
-    title = 'Solar Guide Kenya'
-    description = 'Helping you find the best solar solutions in Kenya. Reviews on inverters, panels, and batteries.'
-    author = 'Solar Guide Team'
-    defaultTheme = 'auto'
+    env = "production"
+    title = "Solar Guide Kenya"
+    description = "Save on KPLC bills with the best solar panels in Kenya."
+    author = "Solar Guide Team"
+    defaultTheme = "auto"
     ShowReadingTime = true
     ShowShareButtons = true
-    ShowCodeCopyButtons = true
 
     [params.homeInfoParams]
         Title = "Welcome to Solar Guide Kenya ☀️"
-        Content = "Helping you find the best solar solutions to save on KPLC bills. We review the latest inverters, panels, and batteries available in the Kenyan market."
+        Content = "Helping you find the best solar solutions to save on KPLC bills."
 
-# Updated Menu with Privacy and Contact
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 10
-
-[[menu.main]]
-    name = "Solar Reviews"
-    url = "posts/"
-    weight = 20
-
-[[menu.main]]
-    name = "About Us"
-    url = "about/"
-    weight = 30
-
-[[menu.main]]
-    name = "Contact Us"
-    url = "contact/"
-    weight = 40
-
-[[menu.main]]
-    name = "Privacy Policy"
-    url = "privacy/"
-    weight = 50
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 10
+    [[menu.main]]
+        identifier = "posts"
+        name = "Solar Reviews"
+        url = "/posts/"
+        weight = 20
+    [[menu.main]]
+        identifier = "about"
+        name = "About Us"
+        url = "/about/"
+        weight = 30
+    [[menu.main]]
+        identifier = "contact"
+        name = "Contact Us"
+        url = "/contact/"
+        weight = 40
+    [[menu.main]]
+        identifier = "privacy"
+        name = "Privacy"
+        url = "/privacy/"
+        weight = 50
