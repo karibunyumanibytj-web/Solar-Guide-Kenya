@@ -1,6 +1,6 @@
 ---
 title: "About Solar Guide Kenya"
-layout: "about"
+layout: "page"
 description: "Helping Kenyan households find the most reliable solar solutions."
 ---
 
