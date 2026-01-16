@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,11 +23,16 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # --- THIS IS THE MAGIC FIX ---
-      # This step deletes the broken translation folder so Hugo doesn't crash
-      - name: Delete Poisoned i18n Folder
-        run: rm -rf themes/PaperMod/i18n
-      # -----------------------------
+      - name: Wipe and Reinstall Theme
+        run: |
+          # 1. This deletes the 'themes' folder you uploaded
+          rm -rf themes
+          # 2. This creates a fresh, empty themes folder
+          mkdir -p themes
+          # 3. This downloads a perfect, clean copy of PaperMod
+          git clone --depth=1 https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
+          # 4. This removes the folder that causes the "art-x-" crash
+          rm -rf themes/PaperMod/i18n
 
       - name: Build with Hugo
         run: hugo --minify
@@ -43,5 +47,4 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
