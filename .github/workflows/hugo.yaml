@@ -17,12 +17,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
+
+      # --- THIS IS THE MAGIC FIX ---
+      # This step deletes the broken translation folder so Hugo doesn't crash
+      - name: Delete Poisoned i18n Folder
+        run: rm -rf themes/PaperMod/i18n
+      # -----------------------------
 
       - name: Build with Hugo
         run: hugo --minify
