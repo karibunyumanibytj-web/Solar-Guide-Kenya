@@ -34,3 +34,13 @@ theme = 'PaperMod'
     name = "About Us"
     url = "/about"
     weight = 30
+
+[[menu.main]]
+    name = "Contact Us"
+    url = "/contact"
+    weight = 40
+
+[[menu.main]]
+    name = "Privacy"
+    url = "/privacy"
+    weight = 50
