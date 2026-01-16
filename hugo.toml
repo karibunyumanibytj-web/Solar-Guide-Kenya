@@ -2,7 +2,8 @@ baseURL = "https://karibunyumanibytj-web.github.io/Solar-Guide-Kenya/"
 languageCode = "en-us"
 title = "Solar Guide Kenya"
 theme = "PaperMod"
-
+canonifyURLs = true
+relativeURLs = true
 [params]
     env = "production"
     title = "Solar Guide Kenya"
