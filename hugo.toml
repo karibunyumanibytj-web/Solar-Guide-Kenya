@@ -1,25 +1,28 @@
-baseURL = 'https://solar-guide-kenya.pages.dev/'
-languageCode = 'en-us'
-title = 'Solar Guide Kenya'
-theme = 'PaperMod'
+# Your exact GitHub URL
+baseURL: 'https://karibunyumanibytj-web.github.io/Solar-Guide-Kenya/'
+languageCode: 'en-us'
+title: 'Solar Guide Kenya'
+theme: 'PaperMod'
 
-# This section makes your blog look professional on Google
+# Fixes the layout/broken images
+canonifyURLs: true
+relativeURLs: true
+
 [params]
     env = 'production'
     title = 'Solar Guide Kenya'
-    description = 'The best guide for solar panels, inverters, and batteries in Kenya.'
+    description = 'Helping you find the best solar solutions in Kenya. Reviews on inverters, panels, and batteries.'
     author = 'Solar Guide Team'
     defaultTheme = 'auto'
     ShowReadingTime = true
     ShowShareButtons = true
     ShowCodeCopyButtons = true
 
-    # This is the "Hi there!" section on your homepage
     [params.homeInfoParams]
         Title = "Welcome to Solar Guide Kenya ☀️"
         Content = "Helping you find the best solar solutions to save on KPLC bills. We review the latest inverters, panels, and batteries available in the Kenyan market."
 
-# This creates your navigation menu at the top
+# Updated Menu with Privacy and Contact
 [[menu.main]]
     name = "Home"
     url = "/"
@@ -27,20 +30,20 @@ theme = 'PaperMod'
 
 [[menu.main]]
     name = "Solar Reviews"
-    url = "/posts"
+    url = "posts/"
     weight = 20
 
 [[menu.main]]
     name = "About Us"
-    url = "/about"
+    url = "about/"
     weight = 30
 
 [[menu.main]]
     name = "Contact Us"
-    url = "/contact"
+    url = "contact/"
     weight = 40
 
 [[menu.main]]
-    name = "Privacy"
-    url = "/privacy"
+    name = "Privacy Policy"
+    url = "privacy/"
     weight = 50
