@@ -8,9 +8,16 @@ theme = "PaperMod"
     defaultTheme = "auto"
 
 [params.homeInfoParams]
-    Title = "Welcome to Solar Guide Kenya ☀️"
-    Content = "The best guide for solar energy solutions in Kenya."
+   [params.homeInfoParams]
+    Title = "Solar Guide Kenya ☀️"
+    Content = "Cutting through the noise to find you the best solar deals in Nairobi."
 
+[[params.homeInfoParams.buttons]]
+    name = "View 2026 Price Guide"
+    url = "posts/top-5-hybrid-inverters" # Make sure this matches your post link
+[[params.homeInfoParams.buttons]]
+    name = "Get a Quote"
+    url = "contact"
 [[menu.main]]
     name = "Home"
     url = "/"
