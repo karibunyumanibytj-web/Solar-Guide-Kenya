@@ -1,23 +1,31 @@
 ---
-title: "About Solar Guide Kenya"
+title: "About Solar Guide Kenya | Your Trusted Energy Partner"
 layout: "page"
-description: "Helping Kenyan households find the most reliable solar solutions."
+description: "Empowering Kenyan homeowners with honest solar reviews, price comparisons, and installation guides to beat KPLC blackouts."
 ---
 
-# Welcome to Solar Guide Kenya ☀️
+# Switching to Solar Shouldn't Be Confusing ☀️
 
-At **Solar Guide Kenya**, we believe that clean, affordable energy should be accessible to every household and business in Kenya. 
+At **Solar Guide Kenya**, we help you navigate the complex world of renewable energy. Whether you are in Nairobi looking to cut down a 10,000 KES monthly power bill or in a rural area seeking reliable off-grid power, we’ve got you covered.
 
-### Why We Started
-High electricity bills and frequent blackouts are a challenge for many. While there are many solar products in the market, finding **honest reviews** and **accurate prices** in Nairobi, Mombasa, and across the country is difficult. 
+### Why You Can Trust Us
+The Kenyan solar market is flooded with low-quality clones. We started this guide because we saw too many households investing in batteries that die in six months. 
 
-### What We Do
-We provide expert guides on:
-- **Solar Inverters:** Comparing Must, Growatt, and Victron for the Kenyan climate.
-- **Battery Tech:** Helping you choose between Lithium-ion (LiFePO4) and Gel batteries.
-- **Price Transparency:** Tracking current market prices at local dealers.
+We bridge the gap by providing:
+* **Vetted Reviews:** We analyze brands like **Must, Growatt, and Victron** specifically for how they handle the Kenyan grid and climate.
+* **Local Market Prices:** No "price on call." We track estimated costs in KES to help you budget accurately.
+* **Installation Logic:** We don't just sell; we explain. From sizing your array to choosing between **Lithium-ion (LiFePO4)** and **Gel batteries**, we make the tech simple.
 
-### Our Promise
-We only recommend products that are durable and have local warranty support. Our goal is to save you money while keeping your lights on, 24/7.
+### How We Help You Save
+1.  **The Budget Finder:** Reviews of affordable, high-performance Tier-1 panels.
+2.  **Warranty Guides:** We prioritize products with local service centers in Kenya so you're never left in the dark.
+3.  **Real Math:** We show you the actual ROI (Return on Investment) based on current **KPLC tariffs**.
 
-**Karibu Nyumbani!**
+---
+
+### 🚀 Ready to Power Your Home?
+Check out our latest guides to get started:
+* [Best Solar Inverters for Kenyan Homes (2024)](/inverter-guide)
+* [Lithium vs. Gel: Which Battery is Worth Your Money?](/battery-comparison)
+
+**Karibu Nyumbani – Let’s light up your home, the smart way.**
