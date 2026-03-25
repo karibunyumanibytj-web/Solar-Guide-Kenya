@@ -33,7 +33,7 @@ url: "/calculator/"
     <div style="background: #fdf2e9; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
       <p style="margin: 0 0 10px 0; font-size: 18px;"><strong style="color: #d35400;">Inverter Size:</strong> <span id="resInverter"></span></p>
       <p style="margin: 0 0 10px 0; font-size: 18px;"><strong style="color: #d35400;">Battery Bank:</strong> <span id="resBattery"></span></p>
-      <p style="margin: 0; font-size: 18px;"><strong style="color: #d35400;">The "Car Guy" Verdict:</strong> <span id="resVerdict" style="font-style: italic;"></span></p>
+      <p style="margin: 0; font-size: 18px;"><strong style="color: #d35400;">The "Solar Guy" Verdict:</strong> <span id="resVerdict" style="font-style: italic;"></span></p>
     </div>
 
     <p style="font-size: 15px; color: #4b5563; line-height: 1.5;">This is a rough estimate to protect you from being oversold. To get actual prices for trusted brands like <strong>Must</strong> or <strong>Growatt</strong> from platforms like Jumia, send these results directly to my WhatsApp. I'll review it for free!</p>
