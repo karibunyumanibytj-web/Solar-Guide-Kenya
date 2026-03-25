@@ -85,10 +85,21 @@ url: "/calculator/"
                 document.getElementById('resVerdict').innerText = ver;
                 
                 // Fix WhatsApp Link
-                var msg = encodeURIComponent("Hi John! 👋 My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find the best Jumia links for this?");
-                var waUrl = "https://wa.me/254748101279?text=" + msg;
+               // Fix WhatsApp Link: Using the more reliable API link
+                var phone = "254748101279";
+                var text = "Hi John! 👋 My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find the best Jumia links for this?";
+                var finalUrl = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(text);
+                
                 var waBtn = document.getElementById('whatsappBtn');
-                waBtn.setAttribute('href', waUrl);
+                
+                // 1. Set the href as a fallback
+                waBtn.href = finalUrl;
+                
+                // 2. Add an explicit click function to FORCE the redirect
+                waBtn.onclick = function(event) {
+                    event.preventDefault(); // Stop the default behavior
+                    window.open(finalUrl, '_blank'); // Force a new window/tab to open
+                };
 
                 // Show Results with Smooth Animation
                 var results = document.getElementById('resultsBox');
