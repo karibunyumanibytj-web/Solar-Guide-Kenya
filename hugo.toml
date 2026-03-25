@@ -40,3 +40,8 @@ theme = "PaperMod"
     name = "Privacy Policy"
     url = "/privacy/"
     weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
