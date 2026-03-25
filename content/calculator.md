@@ -41,56 +41,50 @@ url: "/calculator/"
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const btn = document.getElementById('analyzeBtn');
-    
-    if(btn) {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevents the page from refreshing
-            
-            const billInput = document.getElementById('kplcBill').value;
-            const bill = parseInt(billInput);
-            const goal = document.getElementById('userGoal').value;
-            
-            if (!bill || bill <= 0 || isNaN(bill)) {
-                alert("Please enter a valid KPLC bill amount (e.g., 4500).");
-                return;
-            }
+<script type="text/javascript">
+(function() {
+    // This function runs immediately to find your button
+    var pollBtn = setInterval(function() {
+        var btn = document.getElementById('analyzeBtn');
+        if (btn) {
+            clearInterval(pollBtn); // Stop looking once we find it
+            btn.onclick = function(e) {
+                e.preventDefault();
+                
+                var bill = parseInt(document.getElementById('kplcBill').value);
+                var goal = document.getElementById('userGoal').value;
+                
+                if (!bill || bill <= 0) {
+                    alert("Please enter your bill!");
+                    return;
+                }
 
-            let inverter, battery, verdict;
+                var inv, bat, ver;
+                if (goal === "basic" || bill < 3000) {
+                    inv = "3kW Must PV1800";
+                    bat = "100Ah Gel/Lithium";
+                    ver = "The Toyota Vitz—perfect for light city driving (WiFi/TV).";
+                } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
+                    inv = "5kW Growatt SPF";
+                    bat = "5kWh Lithium";
+                    ver = "The Toyota Fielder—the reliable workhorse for Kenyan families.";
+                } else {
+                    inv = "8kW Deye Hybrid";
+                    bat = "10kWh Lithium";
+                    ver = "The Land Cruiser—heavy duty power for big estates.";
+                }
 
-            // Logic Tree
-            if (goal === "basic" || bill < 3000) {
-                inverter = "1kW - 3kW (e.g., Must PV1800)";
-                battery = "100Ah / 12V Gel or 24V Lithium";
-                verdict = "This is the 'Toyota Vitz' setup. It's affordable, highly reliable for daily small loads, and will keep you online when KPLC drops out. Don't let anyone sell you a 5kW system for this!";
-            } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
-                inverter = "5kW (e.g., Growatt SPF 5000)";
-                battery = "5kWh Lithium (e.g., Felicity or Pylontech)";
-                verdict = "This is the 'Toyota Fielder' setup. It's the most popular system in Nairobi right now. It comfortably runs your fridge and lights, and the Lithium battery will last you 10+ years without maintenance.";
-            } else {
-                inverter = "8kW+ Hybrid (e.g., Deye or Sunsynk)";
-                battery = "10kWh+ Lithium";
-                verdict = "This is the 'Land Cruiser' setup. You are running heavy machinery or large pumps. You need a premium inverter that can handle massive power surges without tripping.";
-            }
-
-            // Update the text on the page
-            document.getElementById('resInverter').innerText = inverter;
-            document.getElementById('resBattery').innerText = battery;
-            document.getElementById('resVerdict').innerText = verdict;
-            
-            // Generate the WhatsApp Link
-            const phone = "254748101279";
-            const rawMessage = "Hi John! 👋 I just used your Solar Calculator on the website.\n\nMy KPLC Bill: " + bill + " KES\nMy Goal: " + goal + "\nYour Tool Suggested: A " + inverter + " with a " + battery + " battery.\n\nCan you help me find the best Jumia links or deals for this setup?";
-            const encodedMessage = encodeURIComponent(rawMessage);
-            document.getElementById('whatsappBtn').href = "https://wa.me/" + phone + "?text=" + encodedMessage;
-
-            // Reveal the hidden results box
-            document.getElementById('resultsBox').style.display = 'block';
-        });
-    }
-});
+                document.getElementById('resInverter').innerText = inv;
+                document.getElementById('resBattery').innerText = bat;
+                document.getElementById('resVerdict').innerText = ver;
+                
+                var msg = encodeURIComponent("Hi John! My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find Jumia links for this?");
+                document.getElementById('whatsappBtn').href = "https://wa.me/254748101279?text=" + msg;
+                document.getElementById('resultsBox').style.display = 'block';
+            };
+        }
+    }, 100); // Checks every 100ms until the button is ready
+})();
 </script>
 
 ---
