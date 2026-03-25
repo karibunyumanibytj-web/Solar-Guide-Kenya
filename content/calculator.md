@@ -84,10 +84,10 @@ url: "/calculator/"
                 document.getElementById('resBattery').innerText = bat;
                 document.getElementById('resVerdict').innerText = ver;
                 
-                // Fix WhatsApp Link
+                
                // Fix WhatsApp Link: Using the more reliable API link
                 var phone = "254748101279";
-                var text = "Hi John! 👋 My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find the best Jumia links for this?";
+                var text = "Hi John! 👋 My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find the best Purchase links for this?";
                 var finalUrl = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(text);
                 
                 var waBtn = document.getElementById('whatsappBtn');
