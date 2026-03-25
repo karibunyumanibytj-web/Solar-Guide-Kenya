@@ -25,6 +25,7 @@ url: "/calculator/"
     <option value="heavy">Total Independence (Add Water Pump / Iron Box / Heavy AC)</option>
   </select>
   
+ {{< rawhtml >}}
  <button id="analyzeBtn" style="width: 100%; background: #f39c12; color: white; border: none; padding: 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 18px; transition: background 0.3s;">Analyze My Needs ⚡</button>
   <div id="resultsBox" style="display: none; margin-top: 30px; padding-top: 25px; border-top: 2px dashed #e5e7eb;">
     <h3 style="margin-top: 0; color: #111827; font-size: 22px;">John's Diagnostic Report:</h3>
@@ -86,6 +87,7 @@ url: "/calculator/"
     }, 100); // Checks every 100ms until the button is ready
 })();
 </script>
+{{< /rawhtml >}}
 
 ---
 
