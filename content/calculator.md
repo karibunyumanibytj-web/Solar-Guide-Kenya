@@ -25,8 +25,7 @@ url: "/calculator/"
     <option value="heavy">Total Independence (Add Water Pump / Iron Box / Heavy AC)</option>
   </select>
   
-  <button onclick="calculateSolar()" style="width: 100%; background: #f39c12; color: white; border: none; padding: 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 18px; transition: background 0.3s;">Analyze My Needs ⚡</button>
-
+ <button id="analyzeBtn" style="width: 100%; background: #f39c12; color: white; border: none; padding: 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 18px; transition: background 0.3s;">Analyze My Needs ⚡</button>
   <div id="resultsBox" style="display: none; margin-top: 30px; padding-top: 25px; border-top: 2px dashed #e5e7eb;">
     <h3 style="margin-top: 0; color: #111827; font-size: 22px;">John's Diagnostic Report:</h3>
     
@@ -43,46 +42,55 @@ url: "/calculator/"
 </div>
 
 <script>
-function calculateSolar() {
-    const bill = parseInt(document.getElementById('kplcBill').value);
-    const goal = document.getElementById('userGoal').value;
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('analyzeBtn');
     
-    if (!bill || bill <= 0) {
-        alert("Please enter a valid KPLC bill amount.");
-        return;
+    if(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevents the page from refreshing
+            
+            const billInput = document.getElementById('kplcBill').value;
+            const bill = parseInt(billInput);
+            const goal = document.getElementById('userGoal').value;
+            
+            if (!bill || bill <= 0 || isNaN(bill)) {
+                alert("Please enter a valid KPLC bill amount (e.g., 4500).");
+                return;
+            }
+
+            let inverter, battery, verdict;
+
+            // Logic Tree
+            if (goal === "basic" || bill < 3000) {
+                inverter = "1kW - 3kW (e.g., Must PV1800)";
+                battery = "100Ah / 12V Gel or 24V Lithium";
+                verdict = "This is the 'Toyota Vitz' setup. It's affordable, highly reliable for daily small loads, and will keep you online when KPLC drops out. Don't let anyone sell you a 5kW system for this!";
+            } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
+                inverter = "5kW (e.g., Growatt SPF 5000)";
+                battery = "5kWh Lithium (e.g., Felicity or Pylontech)";
+                verdict = "This is the 'Toyota Fielder' setup. It's the most popular system in Nairobi right now. It comfortably runs your fridge and lights, and the Lithium battery will last you 10+ years without maintenance.";
+            } else {
+                inverter = "8kW+ Hybrid (e.g., Deye or Sunsynk)";
+                battery = "10kWh+ Lithium";
+                verdict = "This is the 'Land Cruiser' setup. You are running heavy machinery or large pumps. You need a premium inverter that can handle massive power surges without tripping.";
+            }
+
+            // Update the text on the page
+            document.getElementById('resInverter').innerText = inverter;
+            document.getElementById('resBattery').innerText = battery;
+            document.getElementById('resVerdict').innerText = verdict;
+            
+            // Generate the WhatsApp Link
+            const phone = "254748101279";
+            const rawMessage = "Hi John! 👋 I just used your Solar Calculator on the website.\n\nMy KPLC Bill: " + bill + " KES\nMy Goal: " + goal + "\nYour Tool Suggested: A " + inverter + " with a " + battery + " battery.\n\nCan you help me find the best Jumia links or deals for this setup?";
+            const encodedMessage = encodeURIComponent(rawMessage);
+            document.getElementById('whatsappBtn').href = "https://wa.me/" + phone + "?text=" + encodedMessage;
+
+            // Reveal the hidden results box
+            document.getElementById('resultsBox').style.display = 'block';
+        });
     }
-
-    let inverter, battery, verdict;
-
-    // Logic Tree based on Goal and Bill
-    if (goal === "basic" || bill < 3000) {
-        inverter = "1kW - 3kW (e.g., Must PV1800)";
-        battery = "100Ah / 12V Gel or 24V Lithium";
-        verdict = "This is the 'Toyota Vitz' setup. It's affordable, highly reliable for daily small loads, and will keep you online when KPLC drops out. Don't let anyone sell you a 5kW system for this!";
-    } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
-        inverter = "5kW (e.g., Growatt SPF 5000)";
-        battery = "5kWh Lithium (e.g., Felicity or Pylontech)";
-        verdict = "This is the 'Toyota Fielder' setup. It's the most popular system in Nairobi right now. It comfortably runs your fridge and lights, and the Lithium battery will last you 10+ years without maintenance.";
-    } else {
-        inverter = "8kW+ Hybrid (e.g., Deye or Sunsynk)";
-        battery = "10kWh+ Lithium";
-        verdict = "This is the 'Land Cruiser' setup. You are running heavy machinery or large pumps. You need a premium inverter that can handle massive power surges without tripping.";
-    }
-
-    // Update the DOM
-    document.getElementById('resInverter').innerText = inverter;
-    document.getElementById('resBattery').innerText = battery;
-    document.getElementById('resVerdict').innerText = verdict;
-    
-    // Create the Dynamic WhatsApp Message
-    const phone = "254748101279";
-    const rawMessage = `Hi John! 👋 I just used your Solar Calculator on the website.\n\nMy KPLC Bill: ${bill} KES\nMy Goal: ${goal}\nYour Tool Suggested: A ${inverter} with a ${battery} battery.\n\nCan you help me find the best Jumia links or deals for this setup?`;
-    const encodedMessage = encodeURIComponent(rawMessage);
-    document.getElementById('whatsappBtn').href = `https://wa.me/${phone}?text=${encodedMessage}`;
-
-    // Show the results box
-    document.getElementById('resultsBox').style.display = 'block';
-}
+});
 </script>
 
 ---
