@@ -44,11 +44,10 @@ url: "/calculator/"
 
 <script type="text/javascript">
 (function() {
-    // This function runs immediately to find your button
     var pollBtn = setInterval(function() {
         var btn = document.getElementById('analyzeBtn');
         if (btn) {
-            clearInterval(pollBtn); // Stop looking once we find it
+            clearInterval(pollBtn);
             btn.onclick = function(e) {
                 e.preventDefault();
                 
@@ -60,33 +59,66 @@ url: "/calculator/"
                     return;
                 }
 
+                // Visual Feedback: Change button text temporarily
+                var originalText = btn.innerText;
+                btn.innerText = "Analyzing Specs... 🛠️";
+                btn.style.opacity = "0.7";
+
                 var inv, bat, ver;
                 if (goal === "basic" || bill < 3000) {
                     inv = "3kW Must PV1800";
                     bat = "100Ah Gel/Lithium";
-                    ver = "Perfect for light lightning  (WiFi/TV).Perfect for the essentials. It’s the 'KPLC Insurance' setup, it keeps the house bright and the internet running .";
+                    ver = "This is the 'KPLC Insurance' setup. Keeping your WiFi, TV, and lights bright through any blackout.";
                 } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
                     inv = "5kW Growatt SPF";
                     bat = "5kWh Lithium";
-                    ver = "The reliable workhorse for Kenyan families.";
+                    ver = "The Toyota Fielder of solar. It's the reliable workhorse for Kenyan families who want to run the fridge and microwave without stress.";
                 } else {
                     inv = "8kW Deye Hybrid";
                     bat = "10kWh Lithium";
-                    ver = "The heavy duty power for big estates.";
+                    ver = "Heavy-duty power for big estates, boreholes, and total energy independence.";
                 }
 
+                // Update the UI
                 document.getElementById('resInverter').innerText = inv;
                 document.getElementById('resBattery').innerText = bat;
                 document.getElementById('resVerdict').innerText = ver;
                 
-                var msg = encodeURIComponent("Hi John! My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find Jumia links for this?");
-                document.getElementById('whatsappBtn').href = "https://wa.me/254748101279?text=" + msg;
-                document.getElementById('resultsBox').style.display = 'block';
+                // Fix WhatsApp Link
+                var msg = encodeURIComponent("Hi John! 👋 My KPLC bill is " + bill + " KES. Your tool suggested the " + inv + " setup. Can you help me find the best Jumia links for this?");
+                var waUrl = "https://wa.me/254748101279?text=" + msg;
+                var waBtn = document.getElementById('whatsappBtn');
+                waBtn.setAttribute('href', waUrl);
+
+                // Show Results with Smooth Animation
+                var results = document.getElementById('resultsBox');
+                results.style.display = 'block';
+                
+                // Force a slight delay for the visual "Work" feel
+                setTimeout(function() {
+                    btn.innerText = originalText;
+                    btn.style.opacity = "1";
+                    
+                    // Scroll to results so the user knows they are ready
+                    results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    // Make the WhatsApp button pulse to draw the eye
+                    waBtn.style.animation = "pulse 1.5s infinite";
+                }, 600);
             };
         }
-    }, 100); // Checks every 100ms until the button is ready
+    }, 100);
 })();
 </script>
+
+<style>
+/* Adds a subtle 'pick me' animation to the WhatsApp button */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+</style>
 {{< /rawhtml >}}
 
 ---
