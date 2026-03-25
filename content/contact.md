@@ -7,7 +7,7 @@ layout: "contact"
 # Let's Talk Solar! ☀️
 
 <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; background-color: #f9f9f9; padding: 20px; border-radius: 10px;">
-  <img src="/images/john-kennedy-kiruki-solar-expert.jpg" 
+  <img src="/images/john-kennedy-kiruki-solar-expert-kenya.jpeg"
        alt="John Kennedy Kiruki - Solar Guide Kenya" 
        style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #f39c12; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   
