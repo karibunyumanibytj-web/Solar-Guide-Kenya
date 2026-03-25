@@ -64,7 +64,7 @@ url: "/calculator/"
                 if (goal === "basic" || bill < 3000) {
                     inv = "3kW Must PV1800";
                     bat = "100Ah Gel/Lithium";
-                    ver = "Perfect for light lightning  (WiFi/TV)."Perfect for the essentials. It’s the 'KPLC Insurance' setup, it keeps the house bright and the internet running .";
+                    ver = "Perfect for light lightning  (WiFi/TV).Perfect for the essentials. It’s the 'KPLC Insurance' setup, it keeps the house bright and the internet running .";
                 } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
                     inv = "5kW Growatt SPF";
                     bat = "5kWh Lithium";
