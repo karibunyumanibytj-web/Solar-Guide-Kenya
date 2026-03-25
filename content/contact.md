@@ -15,9 +15,6 @@ Click a link below to start a conversation instantly.
 **Primary Sales & Expert Consultation** For product reviews, price inquiries, and system sizing:  
 👉 [**Chat with Primary Line (+254 748 101 279)**](https://wa.me/254748101279?text=Hello%20Solar%20Guide%2C%20I%20need%20help%20choosing%20a%20solar%20system.)
 
-**Support & Alternative Line** If the primary line is busy or for technical support:  
-👉 [**Chat with Support Line (+254 757 942 317)**](https://wa.me/254757942317?text=Hello%20Solar%20Guide%2C%20I%20have%20a%20technical%20question.)
-
 ---
 
 ### 🕒 Consultation Hours
