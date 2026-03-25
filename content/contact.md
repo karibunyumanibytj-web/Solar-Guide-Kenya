@@ -6,8 +6,11 @@ layout: "contact"
 
 # Let's Talk Solar! ☀️
 
-<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
-  <img src="/assets/images/john-kiruki.jpg" alt="John Kennedy Kiruki" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #f39c12;">
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; background-color: #f9f9f9; padding: 20px; border-radius: 10px;">
+  <img src="/images/john-kennedy-kiruki-solar-researcher.jpg" 
+       alt="John Kennedy Kiruki - Solar Guide Kenya" 
+       style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #f39c12; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  
   <div style="flex: 1; min-width: 250px;">
     <h3>Hi, I'm John Kennedy Kiruki</h3>
     <p>I'm a Nairobi-based researcher on a mission to simplify solar for Kenyans. I’m not a "solar salesman"I am a guy who loves tech and hate seeing people get confused by KPLC bills and complex inverter specs. I spend my time studying <strong>Must, Growatt, and Deye</strong> systems so I can give you the honest truth.</p>
