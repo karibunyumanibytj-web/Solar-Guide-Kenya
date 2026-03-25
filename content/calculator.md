@@ -64,15 +64,15 @@ url: "/calculator/"
                 if (goal === "basic" || bill < 3000) {
                     inv = "3kW Must PV1800";
                     bat = "100Ah Gel/Lithium";
-                    ver = "The Toyota Vitz—perfect for light city driving (WiFi/TV).";
+                    ver = "Perfect for light lightning  (WiFi/TV)."Perfect for the essentials. It’s the 'KPLC Insurance' setup, it keeps the house bright and the internet running .";
                 } else if (goal === "standard" || (bill >= 3000 && bill <= 10000)) {
                     inv = "5kW Growatt SPF";
                     bat = "5kWh Lithium";
-                    ver = "The Toyota Fielder—the reliable workhorse for Kenyan families.";
+                    ver = "The reliable workhorse for Kenyan families.";
                 } else {
                     inv = "8kW Deye Hybrid";
                     bat = "10kWh Lithium";
-                    ver = "The Land Cruiser—heavy duty power for big estates.";
+                    ver = "The heavy duty power for big estates.";
                 }
 
                 document.getElementById('resInverter').innerText = inv;
