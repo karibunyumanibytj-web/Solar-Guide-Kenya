@@ -1,27 +1,34 @@
 ---
 title: "Contact Solar Guide Kenya"
-description: "Have questions about solar panels or inverters? Reach out to our expert team via WhatsApp."
+description: "Have questions about solar panels or inverters? Reach out to John Kennedy Kiruki for independent research and advice."
 layout: "contact"
 ---
 
 # Let's Talk Solar! ☀️
 
-Choosing the right solar system is a big investment. Whether you need help sizing your battery bank or choosing between Must, Growatt, and Deye inverters, we are here to help.
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
+  <img src="/assets/images/john-kiruki.jpg" alt="John Kennedy Kiruki" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #f39c12;">
+  <div style="flex: 1; min-width: 250px;">
+    <h3>Hi, I'm John Kennedy Kiruki</h3>
+    <p>I'm a Nairobi-based researcher on a mission to simplify solar for Kenyans. I’m not a "solar salesman"I am a guy who loves tech and hate seeing people get confused by KPLC bills and complex inverter specs. I spend my time studying <strong>Must, Growatt, and Deye</strong> systems so I can give you the honest truth.</p>
+  </div>
+</div>
 
-### 🇰🇪 Chat with Us on WhatsApp
+---
 
-Click a link below to start a conversation instantly. 
+### 🇰🇪 Get Expert (and Honest) Advice on WhatsApp
+If you are confused about which battery to buy or how many panels you need, send me a message. I’m learning more every day and happy to share what I’ve found.
 
-**Primary Sales & Expert Consultation** For product reviews, price inquiries, and system sizing:  
-👉 [**Chat with Primary Line (+254 748 101 279)**](https://wa.me/254748101279?text=Hello%20Solar%20Guide%2C%20I%20need%20help%20choosing%20a%20solar%20system.)
+👉 [**Chat with John (+254 748 101 279)**](https://wa.me/254748101279?text=Hello%20John%2C%20I%20saw%20your%20Solar%20Guide%20blog.%20I%20need%20help%20with...)
 
 ---
 
 ### 🕒 Consultation Hours
-We are online and ready to assist you during these times:
-- **Monday – Friday:** 8:00 AM – 6:00 PM
-- **Saturday:** 9:00 AM – 1:00 PM
-- **Sunday:** Closed (Resting for a sunny Monday!)
+I’m usually online and researching during these times:
+* **Monday – Friday:** 8:00 AM – 6:00 PM
+* **Saturday:** 9:00 AM – 1:00 PM
 
----
-*Note: We provide independent advice to help you save on KPLC bills. Always verify final installation prices with your chosen technician.*
+### 🛡️ My Promise to You
+I provide independent advice. If you choose to buy a system through my links, I may earn a small affiliate commission at no extra cost to you. This helps me keep the blog running and my research free for everyone.
+
+*Based in Nairobi, serving the 254.*
